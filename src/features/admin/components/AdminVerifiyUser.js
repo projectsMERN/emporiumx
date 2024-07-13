@@ -28,8 +28,9 @@ function AdminVerifyUser() {
 
   const [users, setUsers] = useState([]);
 
+  // http://localhost:3000
   useEffect(() => {
-    axios.get('http://localhost:3000/users/allUsers')
+    axios.get('/users/allUsers')
     .then(users => setUsers(users.data))
     .catch(err => console.log(err))
   }, [dispatch]);
