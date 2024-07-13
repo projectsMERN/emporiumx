@@ -23,8 +23,9 @@ export default function Login() {
   const handleButton = () => {
     history(`/otp-verification?email=${encodeURIComponent(val)}`);
 
+    //http://localhost:3000
     // Initiate Email
-    axios.get(`http://localhost:3000/auth/otp-verification?email=${encodeURIComponent(val)}`)
+    axios.get(`/auth/otp-verification?email=${encodeURIComponent(val)}`)
     .then(users => console.log(" "))
     .catch(err => console.log(" "))
 
